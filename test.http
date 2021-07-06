@@ -1,0 +1,45 @@
+GET http://127.0.0.1:8000/api/students HTTP/1.1
+
+###
+POST http://127.0.0.1:8000/api/students HTTP/1.1
+Content-Type: application/json
+
+{
+    "Ime": "Andjelka",
+    "Prezime": "Ilic",
+    "Broj indeksa": "2017/0337",
+    "Godina studija": "Cetvrta",
+    "Pol": "Z"
+}
+
+###
+
+PUT http://127.0.0.1:8000/api/students/14 
+Content-Type: application/json
+
+{
+    "Ime": "Andjela",
+    "Prezime": "Ilic",
+    "Broj indeksa": "2017/0337",
+    "Godina studija": "Cetvrta"
+}
+
+###
+
+DELETE http://127.0.0.1:8000/api/students/4
+
+
+###
+
+GET http://127.0.0.1:8000/api/ispits HTTP/1.1
+
+###
+
+POST http://127.0.0.1:8000/api/ispits HTTP/1.1
+Content-Type: application/json
+
+{
+    "Predmet": "Inteligentni",
+    "Rezultat": "Polozila",
+    "Student": 14
+}
